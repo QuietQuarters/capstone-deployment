@@ -65,7 +65,7 @@ def increase_yellow_saturation_all(image):
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://images.unsplash.com/photo-1501426026826-31c667bdf23d");
+background-image: url("https://img.freepik.com/premium-photo/lettuce-plant-field-vegetable-agriculture-sunset-light_1627-1309.jpg");
 background-size: 180%;
 background-position: top left;
 background-repeat: no-repeat;
