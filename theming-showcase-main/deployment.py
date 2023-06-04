@@ -2,6 +2,7 @@
 #Import of necessary libraries
 import streamlit as st
 import tensorflow as tf
+import urllib.request
 import numpy as np
 from tensorflow.keras.models import load_model 
 from tensorflow.keras.preprocessing import image 
@@ -65,7 +66,10 @@ st.title('Diseased Vegetable Image Classifier')
 #Loading of optimal model trained
 @st.cache_resource #to store the loaded model in cache for faster app run time 
 def model_load():
-    model = tf.keras.models.load_model('https://github.com/QuietQuarters/capstone-deployment/blob/main/theming-showcase-main/MobileNetV2_model/model.19.h5')
+    model_url = 'https://github.com/QuietQuarters/capstone-deployment/raw/main/theming-showcase-main/MobileNetV2_model/model.19.h5'
+    model_path = 'model.19.h5'
+    urllib.request.urlretrieve(model_url, model_path)
+    model = tf.keras.models.load_model(model_path)
     return model
 
 model=model_load()
