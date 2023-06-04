@@ -65,7 +65,7 @@ st.title('Diseased Vegetable Image Classifier')
 #Loading of optimal model trained
 @st.cache_resource #to store the loaded model in cache for faster app run time 
 def model_load():
-    model = tf.keras.models.load_model('MobileNetV2_model/model.19.h5')
+    model = tf.keras.models.load_model('https://github.com/QuietQuarters/capstone-deployment/blob/main/theming-showcase-main/MobileNetV2_model/model.19.h5')
     return model
 
 model=model_load()
