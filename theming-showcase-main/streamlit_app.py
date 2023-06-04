@@ -111,6 +111,6 @@ else:
         else:
             text02 = 'Vegetable might be'
             class02 = 'diseased'
-            text03 = 'Consider further checks.'
+            text03 = 'Follow up with personal check.'
             st.write(f'<span style="font-size:26px;">{text02}</span> <span style="font-size:26px;color:red;">{class02}</span>', unsafe_allow_html=True)
             st.write(f'<span style="font-size:26px;">{text03}</span>', unsafe_allow_html=True)
