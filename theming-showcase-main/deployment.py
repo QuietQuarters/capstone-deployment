@@ -66,8 +66,7 @@ page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-image: url("https://raw.githubusercontent.com/QuietQuarters/capstone-deployment/main/theming-showcase-main/streamlit_backgrd.jpg");
-background-size: 180%;
-background-position: top left;
+background-size: cover;
 background-repeat: no-repeat;
 background-attachment: local;
 }}
