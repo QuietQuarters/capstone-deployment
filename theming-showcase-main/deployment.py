@@ -61,17 +61,21 @@ def increase_yellow_saturation_all(image):
 ############################################################################
 
 #Add background image to streamlit app
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('https://github.com/QuietQuarters/capstone-deployment/tree/main/theming-showcase-main/streamlit_backgrd.jpg');
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://github.com/QuietQuarters/capstone-deployment/blob/main/theming-showcase-main/streamlit_backgrd.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
 
 #Setting title of the streamlit app
 st.title('Diseased Vegetable Image Classifier')
