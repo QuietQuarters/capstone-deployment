@@ -62,32 +62,18 @@ def increase_yellow_saturation_all(image):
 ############################################################################
 
 #Add background image to streamlit app
-@st.experimental_memo
-def get_img_as_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+background_css = '''
+    <style>
+    body {
+        background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fsahelconsult.com%2Fcovid-19-effects-and-resilience-of-vegetable-farmers-in-north-western-nigeria%2F&psig=AOvVaw0Cz0FHc4BbD6TPlLmutlz_&ust=1685976218003000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLDUxv7sqf8CFQAAAAAdAAAAABAJ');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    </style>
+'''
 
-
-page_bg_img = f"""
-<style>
-[data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://github.com/QuietQuarters/capstone-deployment/blob/main/theming-showcase-main/streamlit_backgrd.jpg");
-background-size: 180%;
-background-position: top left;
-background-repeat: no-repeat;
-background-attachment: local;
-}}
-
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
-
-[data-testid="stToolbar"] {{
-right: 2rem;
-}}
-</style>
-"""
+st.markdown(background_css, unsafe_allow_html=True)
 
 #Setting title of the streamlit app
 st.title('Diseased Vegetable Image Classifier')
