@@ -62,27 +62,34 @@ def increase_yellow_saturation_all(image):
 ############################################################################
 
 #Add background image to streamlit app
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
+@st.experimental_memo
+def get_img_as_base64(file):
+    with open(file, "rb") as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:C:\Users\User\Desktop\deployment capstone\capstone-deployment\theming-showcase-main\streamlit_backgrd.jpg;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
 
-set_png_as_page_bg('background.png')
+img = get_img_as_base64("image.jpg")
+
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("https://github.com/QuietQuarters/capstone-deployment/blob/main/theming-showcase-main/streamlit_backgrd.jpg");
+background-size: 180%;
+background-position: top left;
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+
+[data-testid="stToolbar"] {{
+right: 2rem;
+}}
+</style>
+"""
 
 #Setting title of the streamlit app
 st.title('Diseased Vegetable Image Classifier')
