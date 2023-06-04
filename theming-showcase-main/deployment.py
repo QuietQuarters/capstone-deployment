@@ -119,8 +119,8 @@ else:
     for pred in result:
         if pred[0] > 0.5:
             text = 'Vegetable is classified as'
-            class01 = 'healthy'
-            st.write(f'<span style="font-size:26px;">{text}</span> <span style="font-size:26px;color:lightgreen;">{class01}</span>', 
+            class01 = 'healthy.'
+            st.write(f'<span style="font-size:26px;">{text}</span> <span style="font-size:26px;color:darkgreen;">{class01}</span>', 
                      unsafe_allow_html=True)
         else:
             text02 = 'Vegetable might be'
