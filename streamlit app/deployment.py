@@ -75,7 +75,7 @@ background-attachment: local;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 #Setting title of the streamlit app
-st.title('Diseased Vegetable Image Classifier')
+st.title(':black[Diseased Vegetable Image Classifier]')
 
 #Loading of optimal model trained
 @st.cache_resource #to store the loaded model in cache for faster app run time 
@@ -89,7 +89,7 @@ def model_load():
 model=model_load()
 
 #Extracting uploaded file
-file = st.file_uploader(":black[Drop image file into white box below.]", type=["jpg", "png", "jpeg"])
+file = st.file_uploader(":black[Drop image file into box below.]", type=["jpg", "png", "jpeg"])
     
 if file is None:
     st.write(f'<p style="font-size:26px;color:black;">Step 1: Upload a file from a local drive or drag an image from browser</p>', unsafe_allow_html=True)
