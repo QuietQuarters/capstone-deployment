@@ -75,7 +75,7 @@ background-attachment: local;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 #Setting title of the streamlit app
-st.title(':black[Diseased Vegetable Image Classifier!]:sunglasses:')
+st.title(':black[Diseased Vegetable Image Classifier]')
 
 #Loading of optimal model trained
 @st.cache_resource #to store the loaded model in cache for faster app run time 
