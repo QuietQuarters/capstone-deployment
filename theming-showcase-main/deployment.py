@@ -89,10 +89,13 @@ def model_load():
 model=model_load()
 
 #Extracting uploaded file
-file = st.file_uploader("For single images only. Note: Refrain from loading images with presence of water droplets for better results.", type=["jpg", "png", "jpeg"])
+file = st.file_uploader("Drop image file into white box below.", type=["jpg", "png", "jpeg"])
     
 if file is None:
-    st.write(f'<p style="font-size:26px;color:black;">Upload an image above to start!</p>', unsafe_allow_html=True)
+    st.write(f'<p style="font-size:26px;color:black;">Step 1: Upload a file from a local drive or drag an image from browser</p>', unsafe_allow_html=True)
+    st.write(f'<p style="font-size:26px;color:black;">Step 2: Wait for result of classification</p>', unsafe_allow_html=True)
+    st.write(f'<p style="font-size:26px;color:darkred;;font-style:italic;">Note: Please use images of bak choy/Brassica rapa subsp. chinensis for best results </p>', unsafe_allow_html=True)
+
 else:
     # Convert uploaded file to bytes in desired data type format
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
