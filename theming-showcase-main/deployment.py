@@ -94,7 +94,7 @@ file = st.file_uploader("Drop image file into white box below.", type=["jpg", "p
 if file is None:
     st.write(f'<p style="font-size:26px;color:black;">Step 1: Upload a file from a local drive or drag an image from browser</p>', unsafe_allow_html=True)
     st.write(f'<p style="font-size:26px;color:black;">Step 2: Wait for result of classification</p>', unsafe_allow_html=True)
-    st.write(f'<p style="font-size:26px;color:darkred;;font-style:italic;">Note: Please use images of bak choy/Brassica rapa subsp. chinensis for best results </p>', unsafe_allow_html=True)
+    st.write(f'<p style="font-size:20px;color:darkred;;font-style:italic;">Note: Please use images of bak choy/Brassica rapa subsp. chinensis for best results </p>', unsafe_allow_html=True)
 
 else:
     # Convert uploaded file to bytes in desired data type format
