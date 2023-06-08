@@ -65,7 +65,7 @@ def increase_yellow_saturation_all(image):
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://raw.githubusercontent.com/QuietQuarters/capstone-deployment/main/theming-showcase-main/streamlit_background.jpg");
+background-image: url("https://raw.githubusercontent.com/QuietQuarters/capstone-deployment/main/theming-showcase-main/streamlit_bkgrd(edited).jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: local;
@@ -75,7 +75,7 @@ background-attachment: local;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 #Setting title of the streamlit app
-st.title(':black[Diseased Vegetable Image Classifier]')
+st.title(':black[GreenEye: Diseased Vegetable Image Classifier]')
 
 #Loading of optimal model trained
 @st.cache_resource #to store the loaded model in cache for faster app run time 
