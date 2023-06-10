@@ -65,7 +65,7 @@ def increase_yellow_saturation_all(image):
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://raw.githubusercontent.com/nichyuen/capstone-deployment/main/theming-showcase-main/streamlit_bkgrd(edited).jpg");
+background-image: url("https://github.com/nichyuen/capstone-deployment/blob/main/theming-showcase-main/streamlit_bkgrd(edited).jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: local;
@@ -80,7 +80,7 @@ st.title(':black[GreenEye: Diseased Vegetable Image Classifier]')
 #Loading of optimal model trained
 @st.cache_resource #to store the loaded model in cache for faster app run time 
 def model_load():
-    model_url = 'https://github.com/nichyuen/capstone-deployment/raw/main/theming-showcase-main/MobileNetV2_model/model.19.h5'
+    model_url = 'https://github.com/nichyuen/capstone-deployment/blob/main/theming-showcase-main/model.19.h5'
     model_path = 'model.19.h5'
     urllib.request.urlretrieve(model_url, model_path)
     model = tf.keras.models.load_model(model_path)
