@@ -80,10 +80,7 @@ st.title(':black[GreenEye: Diseased Vegetable Image Classifier]')
 #Loading of optimal model trained
 @st.cache_resource #to store the loaded model in cache for faster app run time 
 def model_load():
-    model_url = 'https://github.com/nichyuen/capstone-deployment/blob/main/theming-showcase-main/model.19.h5'
-    model_path = 'model.19.h5'
-    urllib.request.urlretrieve(model_url, model_path)
-    model = tf.keras.models.load_model(model_path)
+    model = tf.keras.models.load_model('C:\Users\User\Desktop\deployment capstone\capstone-deployment\theming-showcase-main')
     return model
 
 model=model_load()
